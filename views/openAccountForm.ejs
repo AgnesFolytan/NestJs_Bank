@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        Számlaszám:
+        <input type="text" name="id" value="<%= data.id %>"><br>
+        Összeg:
+        <input type="number" name="balance" value="<%= data.balance %>"><br>
+        Tulajdonos:
+        <input type="text" name="owner" value="<%= data.owner %>"><br>
+        <input type="submit" value="Új számla">
+    </form>
+
+    <% for (let e of errors) {%>
+        <p style="color: red;"><%= e %></p>
+    <% } %>
+</body>
+</html>
